@@ -24,9 +24,8 @@ void Zone::setCivilians(int civilians){
 }
 // Simulation behavior
 void Zone::damage(int amount) {
-    this->destruction += amount;
-	if (this->destruction > 100) this->destruction = 100;
-	this->civilians -= amount * 3;
+    setDestruction(destruction + amount);
+    setCivilians(civilians - amount * 3);
 }
 void Zone::heal(int amount){
     this->destruction -= amount;

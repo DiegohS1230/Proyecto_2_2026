@@ -4,14 +4,14 @@
 #include "FaithStrategy.h"
 #include <sstream>
 
-SimulationEngine::SimulationEngine()
+SimulationEngine::SimulationEngine() //contructor que inicializa el logger con los nombres de los archivos de log y reporte, y establece los valores iniciales para el turno, el número máximo de turnos y el estado de finalización de la simulación.
     : logger("output/log.txt", "output/report.txt") {
     turn = 1;
     maxTurns = 5;
     finished = false;
 }
 
-void SimulationEngine::initialize() {
+void SimulationEngine::initialize() { //El metodo inicializa la simulacion con datos quemados
     zones.addZone(new Zone("Seoul", 20, 10, 1200));
     zones.addZone(new Zone("Busan", 10, 5, 900));
 
@@ -33,7 +33,7 @@ void SimulationEngine::initialize() {
     logger.write("Simulation initialized.");
 }
 
-void SimulationEngine::start() {
+void SimulationEngine::start() { // El método start es el punto de entrada para iniciar la simulación. Llama al método initialize para configurar el estado inicial del juego, y luego entra en un bucle que continúa hasta que se alcance una condición de victoria, derrota o se alcance el número máximo de turnos.
     initialize();
 
     while (!finished && turn <= maxTurns) {
@@ -56,19 +56,14 @@ void SimulationEngine::start() {
     logger.writeReport("Final result:\n" + player->toString() + "\n" + zones.toString());
 }
 
-void SimulationEngine::processTurn() {
+void SimulationEngine::processTurn() { // El metodo processTurn maneja la lógica de cada turno en la simulacion. Primero, registra el inicio del turno en el log. Luego, llama a processEnemiesTurn para que los héroes enemigos realicen sus acciones. Si el jugador no ha sido derrotado después de las acciones de los enemigos, se llama a processPlayerTurn para que el jugador realice su acción. Finalmente, se muestra el estado actual del juego.
     logger.write("\n******** TURN " + to_string(turn) + " ********");
-
     processEnemiesTurn();
-
-    if (!checkDefeat()) {
-        processPlayerTurn();
-    }
-
-    showState();
+    if (!checkDefeat()) processPlayerTurn();
+    showState(); //muestra el estado actual del juego.
 }
 
-void SimulationEngine::processEnemiesTurn() {
+void SimulationEngine::processEnemiesTurn() { //maneja las accciones de los heroes.
     logger.write("\n******** Enemies Turn ********");
 
     if (swordHero && swordHero->isAlive()) {
@@ -87,7 +82,7 @@ void SimulationEngine::processEnemiesTurn() {
     }
 }
 
-void SimulationEngine::processPlayerTurn() {
+void SimulationEngine::processPlayerTurn() { //maneja las acciones del jugador.
     logger.write("\n******** Player Turn ********");
 
     if (!player || !player->isAlive()) {
@@ -102,7 +97,7 @@ void SimulationEngine::processPlayerTurn() {
     }
 }
 
-void SimulationEngine::checkDeaths() {
+void SimulationEngine::checkDeaths() { //Verifica si el jugador o algun heroe ha muerto.
     if (player && !player->isAlive()) {
         logger.write(player->getName() + " has fallen.");
     }
@@ -120,14 +115,14 @@ void SimulationEngine::checkDeaths() {
     }
 }
 
-bool SimulationEngine::allEnemiesDefeated() {
+bool SimulationEngine::allEnemiesDefeated() { //Verifica si los heroes enemigos han sido derrotados.
     return swordHero && timeHero && faithHero &&
         !swordHero->isAlive() &&
         !timeHero->isAlive() &&
         !faithHero->isAlive();
 }
 
-bool SimulationEngine::isCountryCollapsed() {
+bool SimulationEngine::isCountryCollapsed() { // Verifica si todas las Zonas han colapsado. Si ambas zonas colapsan, el país se considera colapsado.    
     int collapsedZones = 0;
 
     Zone* seoul = zones.findZone("Seoul");
@@ -144,11 +139,11 @@ bool SimulationEngine::isCountryCollapsed() {
     return collapsedZones >= 2;
 }
 
-bool SimulationEngine::checkVictory() {
+bool SimulationEngine::checkVictory() { // Verifica si el jugador ha ganado la partida. El jugador gana si todos los héroes enemigos han sido derrotados.
     return allEnemiesDefeated();
 }
 
-bool SimulationEngine::checkDefeat() {
+bool SimulationEngine::checkDefeat() { // Verifica si el jugador ha perdido la partida. El jugador pierde si muere o si el país colapsa.
     if (!player || !player->isAlive()) {
         return true;
     }
@@ -160,7 +155,7 @@ bool SimulationEngine::checkDefeat() {
     return false;
 }
 
-void SimulationEngine::showState() {
+void SimulationEngine::showState() { // Muestra el estado actual del juego en el log, incluyendo la información del jugador, los héroes enemigos y las zonas.
     logger.write("\n******** CURRENT STATE ********");
 
     if (player) {

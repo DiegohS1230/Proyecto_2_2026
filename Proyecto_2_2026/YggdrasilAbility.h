@@ -1,5 +1,6 @@
 #pragma once
 #include "Ability.h"
+#include "ClassExecption.h"
 class YggdrasilAbility : public Ability
 {
 	public:

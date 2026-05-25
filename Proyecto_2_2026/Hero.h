@@ -10,13 +10,8 @@ protected:
 		int power;
 		Zone* currentZone;
 public:
-	Hero(string name = "", int health = 100, int power = 10, Zone* currentZone = nullptr) {
-		this->name = name;
-	this->health = health;
-	this->power = power;
-	this->currentZone = currentZone;
-	}
-	virtual ~Hero(); //se omite contructor por ser abstracta
+	Hero(string name = "", int health = 100, int power = 10, Zone* currentZone = nullptr);
+	virtual ~Hero();
 	//gets
 	string getName();
 	int getHealth();
@@ -28,7 +23,7 @@ public:
 	void setPower(int power);
 	void setCurrentZone(Zone* currentZone);
 	// Simulation behavior
-	virtual void attack(Hero& target) = 0; // Pure virtual function
+	virtual void attack(Hero& target) = 0; // función pura virtual, cada clase derivada debe implementarla
 	virtual void moveTo(Zone* newZone) = 0;
 	virtual void receiveDamage(int damage) = 0;
 	virtual bool isAlive() = 0;

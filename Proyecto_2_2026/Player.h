@@ -1,10 +1,12 @@
 #pragma once
 #include "Hero.h"
 #include "Ability.h"
+#include "ClassExecption.h"
 class Player : public Hero{
 private:
 	Ability* ability;
 	public:
+	// Constructor y Destructor
 	Player(string name = "", int health = 100, int power = 20, Zone* currentZone = nullptr, Ability* ability = nullptr);
 	~Player();
 	//gets

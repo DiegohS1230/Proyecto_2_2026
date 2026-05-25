@@ -1,4 +1,11 @@
 #include "Hero.h"
+Hero::Hero(string name, int health, int power, Zone* currentZone)
+{
+	this->name = name;
+	this->health = health;
+	this->power = power;
+	this->currentZone = currentZone;
+}
 Hero::~Hero(){ //void
 }
 //gets
