@@ -1,0 +1,213 @@
+Simulation initialized.
+
+******** TURN 1 ********
+
+******** Enemies Turn ********
+Sword Hero acts.
+Time Hero acts.
+Faith Hero acts.
+
+******** Player Turn ********
+Return Hero uses Yggdrasil on Seoul.
+
+******** CURRENT STATE ********
+Player: Return Hero
+Health: 820
+Power: 20
+
+Enemy Hero: Sword Hero
+Health: 150
+Power: 35
+Current Zone: Seoul
+
+Enemy Hero: Time Hero
+Health: 25
+Power: 25
+Current Zone: Busan
+
+Enemy Hero: Faith Hero
+Health: 120
+Power: 20
+Current Zone: Seoul
+
+Zone: Seoul
+Destruction: 80
+Corruption: 25
+Civilians: 895
+
+Zone: Busan
+Destruction: 10
+Corruption: 5
+Civilians: 900
+
+
+
+******** TURN 2 ********
+
+******** Enemies Turn ********
+Sword Hero acts.
+Time Hero acts.
+Faith Hero acts.
+
+******** Player Turn ********
+Return Hero uses Yggdrasil on Seoul.
+
+******** CURRENT STATE ********
+Player: Return Hero
+Health: 765
+Power: 20
+
+Enemy Hero: Sword Hero
+Health: 150
+Power: 35
+Current Zone: Seoul
+
+Enemy Hero: Time Hero
+Health: 0
+Power: 25
+Current Zone: Busan
+
+Enemy Hero: Faith Hero
+Health: 120
+Power: 20
+Current Zone: Seoul
+
+Zone: Seoul
+Destruction: 80
+Corruption: 40
+Civilians: 590
+
+Zone: Busan
+Destruction: 10
+Corruption: 5
+Civilians: 900
+
+
+Time Hero has fallen.
+
+******** TURN 3 ********
+
+******** Enemies Turn ********
+Sword Hero acts.
+Faith Hero acts.
+
+******** Player Turn ********
+Return Hero uses Yggdrasil on Seoul.
+
+******** CURRENT STATE ********
+Player: Return Hero
+Health: 710
+Power: 20
+
+Enemy Hero: Sword Hero
+Health: 150
+Power: 35
+Current Zone: Seoul
+
+Enemy Hero: Time Hero
+Health: 0
+Power: 25
+Current Zone: Busan
+
+Enemy Hero: Faith Hero
+Health: 120
+Power: 20
+Current Zone: Seoul
+
+Zone: Seoul
+Destruction: 80
+Corruption: 55
+Civilians: 285
+
+Zone: Busan
+Destruction: 10
+Corruption: 5
+Civilians: 900
+
+
+Time Hero has fallen.
+
+******** TURN 4 ********
+
+******** Enemies Turn ********
+Sword Hero acts.
+Faith Hero acts.
+
+******** Player Turn ********
+Return Hero uses Yggdrasil on Seoul.
+
+******** CURRENT STATE ********
+Player: Return Hero
+Health: 655
+Power: 20
+
+Enemy Hero: Sword Hero
+Health: 150
+Power: 35
+Current Zone: Seoul
+
+Enemy Hero: Time Hero
+Health: 0
+Power: 25
+Current Zone: Busan
+
+Enemy Hero: Faith Hero
+Health: 120
+Power: 20
+Current Zone: Seoul
+
+Zone: Seoul
+Destruction: 80
+Corruption: 70
+Civilians: 40
+
+Zone: Busan
+Destruction: 10
+Corruption: 5
+Civilians: 900
+
+
+Time Hero has fallen.
+
+******** TURN 5 ********
+
+******** Enemies Turn ********
+Sword Hero acts.
+Faith Hero acts.
+
+******** Player Turn ********
+Return Hero uses Yggdrasil on Seoul.
+
+******** CURRENT STATE ********
+Player: Return Hero
+Health: 600
+Power: 20
+
+Enemy Hero: Sword Hero
+Health: 150
+Power: 35
+Current Zone: Seoul
+
+Enemy Hero: Time Hero
+Health: 0
+Power: 25
+Current Zone: Busan
+
+Enemy Hero: Faith Hero
+Health: 120
+Power: 20
+Current Zone: Seoul
+
+Zone: Seoul
+Destruction: 80
+Corruption: 85
+Civilians: 40
+
+Zone: Busan
+Destruction: 10
+Corruption: 5
+Civilians: 900
+
+
+Time Hero has fallen.
+Simulation ended.

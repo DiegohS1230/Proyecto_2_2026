@@ -1,0 +1,16 @@
+Final result:
+Player: Return Hero
+Health: 600
+Power: 20
+
+Zone: Seoul
+Destruction: 80
+Corruption: 85
+Civilians: 40
+
+Zone: Busan
+Destruction: 10
+Corruption: 5
+Civilians: 900
+
+
