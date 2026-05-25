@@ -2,10 +2,7 @@
 #include "YggdrasilAbility.h"
 
 void YggdrasilAbility::use(Zone* target) {
-    if (target == nullptr) {
-        return;
-    }
-
+    if (!target) throw ClassExecption("YggdrasilAbility received a null pointer.");
     target->heal(20);
     target->setCorruption(target->getCorruption() - 10);
     target->setCivilians(target->getCivilians() + 100);
